@@ -18,6 +18,12 @@ body{
     
 }
 
+.liena-contacto{
+    color: #fff;
+    text-align: center;
+    
+}
+
 
 #container{
 
@@ -99,18 +105,19 @@ nav li a:hover{
     float: right;
      width: 80%; 
 /*     width: calc(80% - 80px);    */ 
+padding-top: 5px;
     min-height: 500px;
     background: #c68d00;
 }
 .body-contacto{
     text-align: center;
-     width: 80%; 
+    
 /*     width: calc(80% - 80px);    */ 
     min-height: 500px;
     background: #c68d00;
 }
 
-aside{
+.aside-derecha{
     float: left;
     /* calc lo que hace es sacar 10px de acda lado. e slo mismo que poner padding-left y paddingright 10 */
     width: calc(20% - 20px);
@@ -146,24 +153,30 @@ footer p{
 }
 
 
-.article{
-    color: aliceblue;
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+.parrafo-quienes{
+    width: 100%;
+    margin: 20px auto;    
+    color: #fff;
+    padding: 15p;
+    background: #c68d00;
+
+}
+.img-izquierda{
+    float: left;
+    margin-right: 15px;
+}
+.img-derecha {
+    float: right;
     margin-left: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+}  
+
+.aside-quieres-somos{
+    color: #fff;
+    font-size: 150%
+
 }
 
-.article:first-child{
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
-
-.article h2{
-    font-size: 25px;
-}
 /* Medias para celulares */
 @media screen and (max-width: 980px) {
     .redes img{

@@ -9,6 +9,8 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/email.css">
+
     <!-- google -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +56,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="http://">Quienes Somos</a></li>
-                    <li><a href="http://">Repustos</a></li>
+                    <li><a href="/quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="http://">Repuestos</a></li>
                     <li><a href="http://">Centro de Reparación</a></li>
                     <li><a href="/contacto.html">Contacto</a> </li>
                 </ul>
@@ -63,24 +65,41 @@
         </header>
         <div class="liena-movil">
             <h1>
-                Repuestos
+                Contacto
             </h1>
+
 
         </div>
         <div class="clearfix"></div>
         <!-- seccion para hacer el body d ela pagina -->
         <section class="body-contacto">
-            <form class="" name="emailForm" action="mailto:matiasetudela@gmail.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="name" maxlength="40" required>
-                <input type="email" name="email" placeholder="email" maxlength="40" required>
-                <textarea name="message" id="" maxlength="500" name="message" placeholder="message"></textarea>
-                <input type="reset" class="button" value="Clear">
-                <input type="submit" class="button" value="Send">
-                </form>
+            <form class="email" name="emailForm" action="mailto:matiasetudela@gmail.com?subject=pedido de reparación" method="POST" enctype="text/plain">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>          
+
+                <div class="clearfix"></div>
+
+                <label for="email" >Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required />
+            
+                <div class="clearfix"></div>
+
+                <label for="asunto">Telefono-Celular</label>
+                <input type ="text" name="asunto" id="asunto" placeholder="Telefono o Celular"/>
+
+                <div class="clearfix"></div>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+                
+                <div class="clearfix"></div>
+                <input type="submit" name="enviar" value="  Enviar "/>
+
+              </form>
 
             
         </section>
-    <aside>
+    <aside class="aside-derecha">
         <!-- <form>
             <input type="text">
             <input type="submit" value="Buscar">
