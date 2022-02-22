@@ -57,6 +57,7 @@ header {
   width: 35px;
   padding-top: 15%;
   padding-left: 20px;
+  text-align: center;
 }
 .face {
   height: 30px;
@@ -86,6 +87,7 @@ button {
   font-size: 25px;
   color: #c68d00;
   text-decoration: none;
+  padding-bottom: 1px;
 }
 nav li a:hover {
   position: relative;
