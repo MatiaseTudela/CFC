@@ -133,11 +133,12 @@ nav li a:hover {
   color: #c68d00;
 }
 
-footer {
+ footer {
   background: #c68d00;
   color: aliceblue;
   height: 100px;
 }
+/*
 .footerEnLinea {
   display: flex;
   align-items: center;
@@ -146,9 +147,40 @@ footer {
 footer p {
   line-height: 100px;
   font-size: 1.5em;
-  display: inline;
-  margin-left: 10%;
+  
+ 
+} */
+footer {  
+
+  left: 0;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  padding-bottom: 4px;
+  text-align: left;
+  padding-top: 50px;
+  
 }
+footer ul{  
+    margin: 0;
+    padding: 0;
+  }
+  footer ul li{
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  footer ul li p{
+    display: inline-block;
+    color: aliceblue;
+    position: relative;
+    transition: .2s ease-in;
+    margin-left: 200px;
+ 
+  }
+  footer ul li p:hover {
+    transform: translateY(+10px);
+  }
 
 .parrafo-quienes {
   width: 100%;
@@ -176,6 +208,10 @@ footer p {
   .redes img {
     display: none;
   }
+  footer{
+    padding-top: 0;
+    bottom: 0;
+  }
 }
 @media screen and (min-width: 980px) {
   .liena-movil {
@@ -189,7 +225,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 980px) {
   header nav {
     width: 80%;
     height: 100%;
@@ -198,6 +234,7 @@ footer p {
     left: -100%;
     /*top:0px;*/
     overflow: auto;
+    z-index: 11;
   }
 
   .menu_bar {
@@ -226,6 +263,12 @@ footer p {
     display: block;
     float: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .aside-derecha{
+      display: none;
+  }
+  footer ul li p{
+    margin-left: 5px;
   }
 }
 
