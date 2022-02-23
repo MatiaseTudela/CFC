@@ -91,7 +91,8 @@ nav li a:hover {
   position: relative;
   bottom: 3px;
   color: azure;
-  border-bottom: 3px solid #0076b0;
+  background-color: #0076b0;
+  /* border-bottom: 3px solid #0076b0; */
 }
 
 .clearfix {

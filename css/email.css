@@ -35,6 +35,7 @@
 	display:inline-block;
     size: 10px;
     margin-bottom: 20px;
+	font-size: larger;
 }
 
 .email input[type="submit"]{
@@ -64,4 +65,5 @@
 	/*resize: vertical | horizontal | none | both*/
 	resize:none;
 	display:block;
+	font-size: larger;
 }
