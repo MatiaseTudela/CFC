@@ -35,20 +35,25 @@ header {
   background: #725545;
 }
 .header-iconos {
-  padding-top: 100px;
-  height: 108px;
-  border-bottom: 5px solid #c68d00;
+  
+  height: 150px;
+  border-bottom: 5px ;
+  position: relative;
 }
 .logo {
-  float: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .logo img {
-  width: 200px;
+  width: 100%;
 }
 
 .redes {
+  position: absolute;
   display: inline-block;
-  float: right;
+  right: 0;
+  bottom: 0;
 }
 .menu_bar {
   display: none;
@@ -73,28 +78,36 @@ nav {
   display: inline-block;
   background: #725545;
   margin: 0;
-  padding: 5px;
+  margin-top: 10px;
+  /* padding: 5px; */
   list-style-type: none;
   text-align: center;
+  background-color: #0076b0;
+  height: 100%;
+  left: 0;
+  width: 99.2%;
 }
 nav ul li {
   display: inline;
 }
-li,
-a,
-button {
+li,a,button {
   padding: 0.2em 1em;
   font-weight: 500;
   font-size: 25px;
-  color: #c68d00;
+  color: #fff;
   text-decoration: none;
-  padding-bottom: 1px;
+ /*  padding-bottom: 1px; */
+  height: 100%;
+ 
+
 }
 nav li a:hover {
   position: relative;
   bottom: 3px;
   color: azure;
-  background-color: #0076b0;
+  background-color: #c68d00;
+  height: 100%;
+  width: 100%;
   /* border-bottom: 3px solid #0076b0; */
 }
 
@@ -102,28 +115,25 @@ nav li a:hover {
   clear: both;
 }
 
-#content {
-
-}
 .principal-padre{
   position:relative;
   min-height: 500px;
+
 }
 .principal-hijo-derecha{
   position: absolute;
   right: 0;
   width: 80%;
-  padding-top: 5px;
-  height: 100%;
+  padding-top: 5px;  
   background: #0076b0;
   text-align: center;
   color: #fff;
 }
 .principal-hijo-izquierda{
-  position: relative;
+  position: absolute;
   left: 0;
   width: 50%;
-  padding-top: 7%;
+  padding-top: 1%;
   min-height: 500px;
 }
 .principal-hijo-izquierda img{
@@ -133,7 +143,7 @@ nav li a:hover {
 .principal-hijo-derecha h1{
 
   font-size: 30px;
-  padding-left: 100px;
+  
 }
 .body-contacto {
   text-align: center;
@@ -178,7 +188,7 @@ footer p {
 footer {  
   position: absolute;
   background: #c68d00;
-  color: aliceblue;
+  color: #725545;
   height: 100px;
   bottom: 0;
   left: 0;
@@ -200,7 +210,7 @@ footer ul{
   }
   footer ul li p{
     display: inline-block;
-    color: aliceblue;
+    color: #725545;
     position: relative;
     transition: .2s ease-in;
     margin-left: 200px;
@@ -306,15 +316,16 @@ header nav ul {
 }
 .slide {
   position: relative;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-  margin-top: 26px;
+  /* box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64); */
+  margin-top: 40px;
+  height: 100px;
 }
 
 .slide-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  
 }
 
 .slide-open:checked + .slide-item {
@@ -327,12 +338,53 @@ header nav ul {
   opacity: 0;
   -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out;
+  left: 0;
+  
 }
 
 .slide-item img {
-  display: block;
+    
   height: auto;
-  max-width: 100%;
+  max-width: 50%;
+  float: left;
+  height: 10%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.slide-item .texto-izq{
+  float: right;
+    height: auto;
+  max-width: 70%;
+  right: 0;
+  background: #0076b0;
+    color: #fff;
+  position: absolute;
+  z-index: -100;
+   height: 450px; 
+  margin-top: 2%;
+
+  align-items: center;
+}
+.slide-item .texto-izq .texto-izq-hijo{
+  float: right;
+  max-width: 70%;
+  margin-top: 5%;
+  
+
+}
+.slide-item .texto-izq .texto-izq-hijo h1{
+  
+  text-align: left;
+  font-size: 5vw;
+  display: block;
+}
+
+.slide-item .texto-izq .texto-izq-hijo p{
+  text-align: left;
+  font-size: 1.1vw;
+  display: block;
+  width: 70%;
+  height: 31px;  
 }
 
 .slide-control {
@@ -352,7 +404,7 @@ header nav ul {
   transform: translate(0, -50%);
   text-align: center;
   width: 40px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .slide-control.prev {
@@ -369,13 +421,8 @@ header nav ul {
 }
 
 #slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3,
-#slide-4:checked ~ .control-4,
-#slide-5:checked ~ .control-5,
-#slide-6:checked ~ .control-6,
-#slide-7:checked ~ .control-7,
-#slide-8:checked ~ .control-8 {
+#slide-2:checked ~ .control-2
+ {
   display: block;
 }
 
@@ -389,11 +436,12 @@ header nav ul {
   right: 0;
   text-align: center;
   z-index: 10;
+  
 }
 
 .slide-indicador li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 5px;  
 }
 
 .slide-circulo {
@@ -408,13 +456,8 @@ header nav ul {
 }
 
 #slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
-#slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo,
-#slide-5:checked ~ .control-5 ~ .slide-indicador li:nth-child(5) .slide-circulo,
-#slide-6:checked ~ .control-6 ~ .slide-indicador li:nth-child(6) .slide-circulo,
-#slide-7:checked ~ .control-7 ~ .slide-indicador li:nth-child(7) .slide-circulo,
-#slide-8:checked ~ .control-8 ~ .slide-indicador li:nth-child(8) .slide-circulo {
+#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo
+{
   color: #c68d00;
 }
 
