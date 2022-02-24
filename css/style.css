@@ -64,9 +64,10 @@ header {
   width: 10px;
 }
 .redes img:hover {
-  position: relative;
+  position: relative ;
   bottom: 3px;
   border-bottom: 3px solid #0076b0;
+  
 }
 nav {
   display: inline-block;
@@ -102,12 +103,37 @@ nav li a:hover {
 }
 
 #content {
-  float: right;
-  width: 80%;
-  /*     width: calc(80% - 80px);    */
-  padding-top: 5px;
+
+}
+.principal-padre{
+  position:relative;
   min-height: 500px;
-  background: #c68d00;
+}
+.principal-hijo-derecha{
+  position: absolute;
+  right: 0;
+  width: 80%;
+  padding-top: 5px;
+  height: 100%;
+  background: #0076b0;
+  text-align: center;
+  color: #fff;
+}
+.principal-hijo-izquierda{
+  position: relative;
+  left: 0;
+  width: 50%;
+  padding-top: 7%;
+  min-height: 500px;
+}
+.principal-hijo-izquierda img{
+  width: 100%;
+}
+
+.principal-hijo-derecha h1{
+
+  font-size: 30px;
+  padding-left: 100px;
 }
 .body-contacto {
   text-align: center;
@@ -136,11 +162,7 @@ nav li a:hover {
   color: #c68d00;
 }
 
- footer {
-  background: #c68d00;
-  color: aliceblue;
-  height: 100px;
-}
+
 /*
 .footerEnLinea {
   display: flex;
@@ -154,9 +176,12 @@ footer p {
  
 } */
 footer {  
-
-  left: 0;
   position: absolute;
+  background: #c68d00;
+  color: aliceblue;
+  height: 100px;
+  bottom: 0;
+  left: 0;
   right: 0;
   overflow: hidden;
   padding-bottom: 4px;
